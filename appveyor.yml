@@ -1,0 +1,7 @@
+stack: jdk 7
+
+test_script:
+- sh: |
+    python --version
+
+build: off
