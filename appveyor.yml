@@ -1,4 +1,8 @@
-stack: jdk 7
+stack:
+  - python 2.7.14
+  - python 3.4.8
+  - python 3.5.5
+  - python 3.6.4
 
 test_script:
 - sh: |
