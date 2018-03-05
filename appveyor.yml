@@ -3,6 +3,9 @@ stack:
   - python 3.4.8
   - python 3.5.5
   - python 3.6.4
+  
+init:
+- appveyor version
 
 test_script:
 - sh: |
