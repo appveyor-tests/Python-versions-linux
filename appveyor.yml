@@ -1,18 +1,13 @@
 stack:
   - python 2.7.17
-  - python 3.4.9
-  - python 3.5.7
-  - python 3.6.8
-  - python 3.7.0
-  - python 3.7.1
-  - python 3.7.2
-  - python 3.7.3
-  - python 3.7.4
+  - python 3.7.5
   - python 3.8.0
-  
+  - python 3.8.1
+  - python 3.9.0
+
 init:
  - appveyor version
- - ps: Update-AppveyorBuild -Message "Image '$env:APPVEYOR_BUILD_WORKER_IMAGE'@'$env:APPVEYOR_BUILD_WORKER_CLOUD' cloud. $env:APPVEYOR_REPO_COMMIT_MESSAGE"
+ - ps: Update-AppveyorBuild -Message "Image '$env:APPVEYOR_BUILD_WORKER_IMAGE'@'$env:APPVEYOR_BUILD_WORKER_CLOUD' cloud."
  - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
  - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
  
@@ -22,3 +17,11 @@ test_script:
     python -c 'import sys; print (sys.version_info)'
 
 build: off
+
+on_failure:
+  - ls -ld $HOME/venv*
+  - ls -ld $HOME/.localpython*
+  - ls -ld $HOME/Python*
+  - du -hs $HOME/venv*
+  - du -hs $HOME/.localpython*
+  
