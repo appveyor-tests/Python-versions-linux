@@ -15,6 +15,7 @@ test_script:
 - sh: |
     python --version
     python -c 'import sys; print (sys.version_info)'
+- sh: pip install pytest
 
 build: off
 
