@@ -1,9 +1,5 @@
 stack:
-  - python 2.7.17
-  - python 3.7.5
-  - python 3.8.0
-  - python 3.8.1
-  - python 3.9.0
+  - ${PYTHON_STACK}
 
 init:
  - appveyor version
