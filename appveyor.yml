@@ -8,6 +8,7 @@ init:
  - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
  
 test_script:
+- ls /opt/python/lib
 - sh: |
     python --version
     python -c 'import sys; print (sys.version_info)'
