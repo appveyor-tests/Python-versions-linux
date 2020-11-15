@@ -8,9 +8,6 @@ init:
  - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
  
 test_script:
-- ls /usr/lib
-- ls /usr/local/lib
-- ls /home/appveyor/.localpython3.9.0/lib
 - sh: |
     python --version
     python -c 'import sys; print (sys.version_info)'
