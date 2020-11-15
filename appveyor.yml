@@ -10,7 +10,7 @@ init:
 test_script:
 - ls /usr/lib
 - ls /usr/local/lib
-- ls /usr/local/lib64
+- ls /home/appveyor/.localpython3.9.0/lib
 - sh: |
     python --version
     python -c 'import sys; print (sys.version_info)'
