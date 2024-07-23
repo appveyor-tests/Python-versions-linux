@@ -11,6 +11,8 @@ test_script:
 - sh: |
     python --version
     python -c 'import sys; print (sys.version_info)'
+# try to upgrade pip before pytest install
+- sh: pip install --upgrade pip
 - sh: pip install pytest
 
 build: off
