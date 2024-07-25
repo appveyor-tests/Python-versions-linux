@@ -1,5 +1,5 @@
-stack:
-  - ${PYTHON_STACK}
+#stack:
+ # - ${PYTHON_STACK}
 
 init:
  - appveyor version
